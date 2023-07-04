@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "AspirinShot",
     platforms: [
-        .iOS(.v15)
+        .iOS(.v15), .macOS(.v13)
     ],
     products: [
         .library(
@@ -17,8 +17,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "AspirinShot",
-            url: "https://binaries.aspirinshot.com/aspirinshot/0.1/AspirinShot.zip",
-            checksum: "1d9c94d7d3411446d1d935e4f1169cb2982586337f630261ce5ef2d177bb6364"
+            url: "https://binaries.aspirinshot.com/aspirinshot/0.2/AspirinShot.zip",
+            checksum: "8d73364ec46abf348cb64ebb9c21870e14e885c384d3a60a4a2c4f591a1cad6a"
         )
     ]
 )
