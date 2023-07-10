@@ -1,0 +1,16 @@
+/* 
+  AppStore.strings
+  AspirinShot-Playground
+
+  Created by Arnaud Joubay on 05/07/2023.
+  
+*/
+
+"Hello" = "Bonjour";
+
+"A basic view that looks like a raw screenshot." = "Une vue basique qui ressemble à une capture d'écran brute.";
+"You can remove its Status bar by deleting the `StatusBarView()`." = "Vous pouvez supprimer sa barre d'état en supprimant la fonction `StatusBarView()`.";
+
+"You can't go wrong\nwith a **title above**" = "Vous ne pouvez pas\nvous **planter**\navec le titre au dessus";
+
+"Alternate the layout for a **more dynamic** gallery." = "Alternez la mise en page pour une galerie **plus dynamique**.";
