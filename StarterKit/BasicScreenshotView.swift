@@ -1,3 +1,4 @@
+#if DEBUG
 import SwiftUI
 import AspirinShot
 
@@ -61,3 +62,4 @@ struct ScreenshotDarkModeView_Previews: PreviewProvider {
         }
     }
 }
+#endif

@@ -1,10 +1,4 @@
-//
-//  BrandNewUIView.swift
-//  AspirinShot-Playground
-//
-//  Created by Arnaud Joubay on 10/07/2023.
-//
-
+#if DEBUG
 import SwiftUI
 import AspirinShot
 
@@ -30,3 +24,4 @@ struct BrandNewUIView: UIViewControllerRepresentable {
         viewController.screenshotFormat = screenshotFormat
     }
 }
+#endif

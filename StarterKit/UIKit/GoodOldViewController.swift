@@ -1,10 +1,4 @@
-//
-//  GoodOldViewController.swift
-//  AspirinShot-Playground
-//
-//  Created by Arnaud Joubay on 10/07/2023.
-//
-
+#if DEBUG
 import UIKit
 import AspirinShot
 
@@ -27,3 +21,4 @@ class GoodOldViewController: UIViewController {
         }
     }
 }
+#endif

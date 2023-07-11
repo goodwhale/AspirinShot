@@ -1,3 +1,4 @@
+#if DEBUG
 import SwiftUI
 import AspirinShot
 
@@ -32,3 +33,4 @@ struct ScreenshotsASApp_Previews: PreviewProvider {
         }
     }
 }
+#endif

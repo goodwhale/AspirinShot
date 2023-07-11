@@ -1,10 +1,4 @@
-//
-//  StatusBarsScreenshotView.swift
-//  AspirinShot-Playground
-//
-//  Created by Arnaud Joubay on 09/07/2023.
-//
-
+#if DEBUG
 import SwiftUI
 import AspirinShot
 
@@ -94,3 +88,4 @@ struct StatusBarsScreenshotView_Previews: PreviewProvider {
         }
     }
 }
+#endif

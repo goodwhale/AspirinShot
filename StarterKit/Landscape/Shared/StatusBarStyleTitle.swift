@@ -1,10 +1,4 @@
-//
-//  StatusBarStyleTitle.swift
-//  AspirinShot-Playground
-//
-//  Created by Arnaud Joubay on 10/07/2023.
-//
-
+#if DEBUG
 import SwiftUI
 
 @available(iOS 15.0, macOS 13.3, *)
@@ -19,3 +13,4 @@ struct StatusBarStyleTitle: ViewModifier {
         }
     }
 }
+#endif

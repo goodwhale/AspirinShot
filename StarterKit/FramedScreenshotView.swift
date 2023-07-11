@@ -1,3 +1,4 @@
+#if DEBUG
 import SwiftUI
 import AspirinShot
 
@@ -45,3 +46,4 @@ struct FramedScreenshotView_Previews: PreviewProvider {
             .screenshotPreview("de", format: .iPad_12_9(.landscape), displayName: "iPad Landscape")
     }
 }
+#endif

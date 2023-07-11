@@ -1,10 +1,4 @@
-//
-//  TitleAboveScreenshotView.swift
-//  AspirinShot-Playground
-//
-//  Created by Arnaud Joubay on 05/07/2023.
-//
-
+#if DEBUG
 import SwiftUI
 import AspirinShot
 
@@ -54,3 +48,4 @@ struct TitleAboveScreenshotView_Previews: PreviewProvider {
             .screenshotPreview("fr", displayName: "FR - 3 Lines")
     }
 }
+#endif

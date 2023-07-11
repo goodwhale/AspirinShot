@@ -1,10 +1,4 @@
-//
-//  TitleBelowScreenshotView.swift
-//  AspirinShot-Playground
-//
-//  Created by Arnaud Joubay on 05/07/2023.
-//
-
+#if DEBUG
 import SwiftUI
 import AspirinShot
 
@@ -55,3 +49,4 @@ struct TitleBelowScreenshotView_Previews: PreviewProvider {
         }
     }
 }
+#endif
