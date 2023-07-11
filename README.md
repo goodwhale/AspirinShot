@@ -68,8 +68,6 @@ extension Screenshot {
 }
 
 struct HeroScreenshotView: View {
-    @State private var isShowingStatusBar = false
-
     var body: some View {
         ScreenshotView { // A wrapper that does a couple nice things
           // The design of your screenshot
@@ -131,6 +129,8 @@ struct HeroScreenshotView: View {
 When it comes to your marketing strings (titles, etc.), you have 2 options:
 * put them in `Localizable.strings` (not ideal, ends in your app build)
 * put them in a dedicated `AppStore.strings` and add it to your Target's Development Assets.
+
+Because of the way `AttributedString` and `NSLocalizedString` behaves, you'll need to swap their init for `AttributedString(envLocalized)` and `NSLocalizedString(envLocalized)` respectively when the environment variable `isAspirinShot` is `true`. Otherwise the screenshots won't be localized.
 
 ## 🏞️ Images and other Assets
 
@@ -228,6 +228,7 @@ You can start from scratch, but using these views will do 3 things for you:
 * `ColoredEmphasisText`
 * `AttributedString.colorEmphasis`
 * `AttributedString(envLocalized)`
+* `NSLocalizedString(envLocalized)`
 
 ## Backgrounds
 
