@@ -1,3 +1,14 @@
+# 0.4
+
+## ✨ New in Starter Kit
+
+* Added UIKit example
+
+## 🐛 Bugfixes
+
+* Changed the main view to better cope with screenshots with NavigationStack/NavigationView
+* Improved support for Chinese with `AttributedString` and `NSLocalizedString`.
+
 # 0.3
 
 ## ✨ New Features

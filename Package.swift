@@ -17,8 +17,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "AspirinShot",
-             url: "https://binaries.aspirinshot.com/aspirinshot/0.3/AspirinShot.zip",
-             checksum: "5d862f947fe5de8d701fcc4df081ba8b13706fb977a2f3533af46427c361af9e"
+             url: "https://binaries.aspirinshot.com/aspirinshot/0.4/AspirinShot.zip",
+             checksum: "6dcc84a4c19b7750bc88559621e73f97772cad3dd390ba8c7dc177af2f95f682"
         )
     ]
 )
