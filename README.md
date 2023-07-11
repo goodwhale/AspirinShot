@@ -89,7 +89,14 @@ We are in the SwiftUI realm, so:
 * it's about states and not results of actions: avoid views that rely on DispatchAsync to present their "final" state
 * mock your data, just like you do for previews
 * you can combine your views however you like (eg: use a ZStack to zoom on a component in the views you present)
-* for UIKit views, you'll need a `UIViewControllerRepresentable` wrapper. Don't forget to forward `@Environment` values such as `.screenshotFormat` or `isAspirinShot`.
+
+### UIKit Views
+
+You can find an example in the starter kit.
+
+* You'll need a `UIViewControllerRepresentable` wrapper.
+* Don't forget to forward AspirinShot `@Environment` values such as `.screenshotFormat` or `isAspirinShot`.
+* You'll probably need to use `NSLocalizedString(envLocalized)` (see below)
 
 ## Data & EnvironmentObjects
 
