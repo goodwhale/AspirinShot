@@ -6,10 +6,13 @@ struct ScreenshotsASApp_Previews: PreviewProvider {
     static var previews: some View {
         AspirinShotPreview(
             screenshots: [
+                // Portrait
                 .basic,
                 .framed,
                 .titleAbove,
                 .titleBelow,
+                .uiKit,
+                // Landscape
                 .autoStatusBars,
                 .blackStatusBars,
                 .whiteStatusBars,
@@ -20,6 +23,7 @@ struct ScreenshotsASApp_Previews: PreviewProvider {
                 case .framed: FramedScreenshotView()
                 case .titleAbove: TitleAboveScreenshotView()
                 case .titleBelow: TitleBelowScreenshotView()
+                case .uiKit: UIKitScreenshotView()
                 case .autoStatusBars: AutoStatusBarsScreenshotView()
                 case .blackStatusBars: BlackStatusBarsScreenshotView()
                 case .whiteStatusBars: WhiteStatusBarsScreenshotView()
