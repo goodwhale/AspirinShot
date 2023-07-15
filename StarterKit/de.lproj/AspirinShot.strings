@@ -9,9 +9,11 @@
 "Hello" = "Hallo";
 
 "A basic view that looks like a raw screenshot." = "Eine einfache Ansicht, die wie ein rohes Bildschirmfoto aussieht.";
-"You can remove its Status bar by deleting the `StatusBarView()`." = "Sie können die Statusleiste entfernen, indem Sie die Funktion `StatusBarView()` löschen.";
+"You can remove the Status Bar and/or Bottom Bar (Home Indicator)." = "Sie können die Statusleiste und/oder die untere Leiste entfernen.";
 
 "You can't go wrong\nwith a **title above**" = "Mit **einem Titel darüber**\nkönnen Sie nichts falsch machen.";
+
+"But perhaps you\n*only* want *the top*\nof the screenshot" = "Aber vielleicht\nmöchten Sie nur\n*den oberen Teil*\ndes Screenshots\nanzeigen lassen";
 
 "Alternate the layout for a **more dynamic** gallery." = "Wechseln Sie das Layout für eine **dynamischere** Galerie.";
 

@@ -12,10 +12,6 @@ struct BasicScreenshotView: View {
     var body: some View {
         ScreenshotView {
             VStack(spacing: 0) {
-                /// Uncomment `StatusBarView()` to add a status bar in your custom views
-                /// Bezel modifers (eg. `.productBezel()`) include an option to add one in their configuration
-                  StatusBarView()
-                
                 // Replace with one of your own Views (don't forget to set its environment)
                 VStack(spacing: 32) {
                     Image(systemName: "pills.fill")
@@ -30,7 +26,7 @@ struct BasicScreenshotView: View {
                     VStack(spacing: 16) {
                         Text("A basic view that looks like a raw screenshot.", tableName: "AspirinShot")
                             .font(.body)
-                        Text("You can remove its Status bar by deleting the `StatusBarView()`.", tableName: "AspirinShot")
+                        Text("You can remove the Status Bar and/or Bottom Bar (Home Indicator).", tableName: "AspirinShot")
                             .font(.body)
                             .foregroundColor(.secondary)
                     }
@@ -44,10 +40,12 @@ struct BasicScreenshotView: View {
                 .padding()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .font(.largeTitle)
+                .screenshotBottomBar(backgroundColor: .clear)
                 .background {
-                    SFPatternStyleView(systemName: "star.fill", itemSize: 40)
+                    SFPatternView(systemName: "star.fill", itemSize: 40)
                         .foregroundStyle(.teal)
                 }
+                .screenshotStatusBar()
             }
         }
     }

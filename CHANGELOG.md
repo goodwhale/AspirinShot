@@ -1,3 +1,34 @@
+# 0.5
+
+## ✨ New Features
+
+* `.screenshotStatusBar()` view modifier to add a status bar to any view
+* `ScreenshotAsSheetModifier` and `.screenshotAsSheet()` to make it look like your view is presented as a sheet. Showcased in the starter kit (`ScreenshotInASheetView`).
+* `BottomBarView` and `screenshotBottomBar` to pair with `screenshotStatusBar` and add a bottom bar with the home indicator. Demo in the StarterKit.
+* `ScreenshotWithTitleVew` supports both fit and fill modes for the screenshot
+* `HomeScreenView` for widgets (see `WidgetsScreenshotView` in StarterKit)
+
+## 🧐 Improvements
+
+* [Breaking Change] `ScreenshotWithTitleVew`: a cleaner and more versatile api, as well as presets. See the documentation.
+* Status bar:
+    * improved behaviour when rescaled: a border could appear between the status bar and content because of pixel rounding
+    * support iPad landscape layout
+* Added `#if DEBUG` statements in all files of the starter kit
+* `.productBezel()` can handle `statusBar: nil` if you don't want one
+* `.minimalBezel()` now supports a custom style & width
+* Improved `SFPatternView` to better support any rotation angle, and added an offset value
+
+## Changes
+
+* Merged `SFPatternStyleView` and `SFPatternView`.
+* Added a `MinimalScreenshotView()` demo
+
+## 🐛 Bugfixes
+
+* Fix rendering of previews in a given locale (App Store-like) when there's more than 3 screenshots
+* Fixed verticalement alignment of `.screenshotFrame()`
+
 # 0.4
 
 ## ✨ New in Starter Kit

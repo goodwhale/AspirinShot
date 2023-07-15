@@ -10,7 +10,7 @@ extension Screenshot {
 @available(iOS 15.0, macOS 13.3, *)
 struct UIKitScreenshotView: View {
     var body: some View {
-        ScreenshotWithTitleView(.init(ratio: 0.15)) {
+        ScreenshotWithTitleView(position: .top(0.2)) {
             BrandNewUIView()
                 .productBezel()
         } title: {

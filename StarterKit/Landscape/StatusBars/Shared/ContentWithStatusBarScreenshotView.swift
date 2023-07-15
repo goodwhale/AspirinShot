@@ -6,10 +6,11 @@ import AspirinShot
 struct ContentWithStatusBarScreenshotView<Background: View>: View {
     @Environment(\.screenshotFormat) private var format
     
-    let title: String
-    let statusBar: StatusBarConfiguration
+    var title: String
+    var statusBar: StatusBarConfiguration
+    var backgroundColor: Color = Color(.systemBackground)
     @ViewBuilder
-    let background: Background
+    var background: Background
 
     var body: some View {
         VStack {
@@ -23,8 +24,7 @@ struct ContentWithStatusBarScreenshotView<Background: View>: View {
         .padding(.vertical, 64)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background { background }
-        .background(Color(.systemBackground))
-        .productBezel(statusBar: statusBar)
+        .productBezel(statusBar: statusBar, backgroundColor: backgroundColor)
         .environment(\.screenshotFormat, format.rotated)
         .modifier(StatusBarStyleTitle(title: title))
     }
@@ -32,9 +32,10 @@ struct ContentWithStatusBarScreenshotView<Background: View>: View {
 
 @available(iOS 15.0, macOS 13.3, *)
 extension ContentWithStatusBarScreenshotView where Background == EmptyView {
-    init(title: String, statusBar: StatusBarConfiguration) {
+    init(title: String, statusBar: StatusBarConfiguration, backgroundColor: Color = Color(.systemBackground)) {
         self.title = title
         self.statusBar = statusBar
+        self.backgroundColor = backgroundColor
         self.background = EmptyView()
     }
 }

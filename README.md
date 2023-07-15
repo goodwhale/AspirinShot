@@ -25,7 +25,7 @@ I may build a gallery of "Made with AspirinShot" screenshots, so if you want to 
 * Add the package to Xcode:
   * File > Add Packages…
   * Enter `https://github.com/goodwhale/AspirinShot`
-  * Select your Target and make sure it's added to the **Frameworks, Libraries, and Embedded Content**
+  * Select your Target and make sure it's added to the **Frameworks, Libraries, and Embedded Content** with the "Do Not Embed" option
 * Check the `Starter Kit` in this repo. You can copy/paste it in your project and start from there, it features a variety of screenshots.
 
 > 💡 Wrap all content of your screenshot-related files in `#if DEBUG … #endif` statements so that it doesn't end up in production.
@@ -217,7 +217,7 @@ You can start from scratch, but using these views will do 3 things for you:
 * handle the background to make sure it's never transparent in your PNGs
 
 * `ScreenshotView`: bare minimum, see comments in docs
-* `ScreenshotWithTitleView`: just adds a title on top or below your screenshot. Customize it with `ScreenshotViewConfiguration`
+* `ScreenshotWithTitleView`: just adds a title on top or below your screenshot. Customize it with `ScreenshotViewConfiguration`.
 
 ## Bezels (views wrappers that may or may not look like a device)
 
@@ -226,6 +226,7 @@ You can start from scratch, but using these views will do 3 things for you:
 * `MinimalBezelModifier` / `.minimalBezel()` and `MinimalBezelConfiguration`
 * `ProductBezelModifier` / `.productBezel()` and `ProductBezelConfiguration`
 * `StatusBarView` and `StatusBarConfiguration`
+* `BottomBarView` and `BottomBarConfiguration`
 
 ## Text Helpers
 
@@ -239,9 +240,18 @@ You can start from scratch, but using these views will do 3 things for you:
 
 ## Backgrounds
 
+(🚧 WIP - use the starter kit folder)
+
 Aside from plain colors and gradients, have fun with:
 * `SFPatternView`
-* `SFPatternStyleView`
+
+## Widgets
+
+(🚧 WIP - use the starter kit folder)
+
+* `HomeScreenView`
+
+At the moment, you'll need to add your widget views to your app's target, or to a dedicated target that doesn't require a `WidgetPreviewContext`. I am investigating other solutions.
 
 # Previewing your screenshots
 
@@ -285,6 +295,14 @@ struct HeroScreenshot_Previews: PreviewProvider {
 }
 ```
 
+but the `ScreenshotPreviews` takes all kinds of formats, so if you want to test your design beyond the scope of your screenshot, you can try more inits, such as:
+
+```swift
+ScreenshotPreviews(in: "fr", formats: .iPhone_5_5(.landscape)) {}
+ScreenshotPreviews(in: "fr", for: .iOS(.landscape)) {}
+ScreenshotPreviews(in: "fr", for: [.iOS, .iOS(.landscape)]) {}
+```
+
 ## Launched within your app
 
 To launch `AspirinShotPreview` from within your app using a hidden button or custom gesture.
@@ -323,6 +341,7 @@ I will try to find better ways to address them: do reach out to talk about it.
     * *Old style:* for that particular view, generate screenshots using a more traditional way and insert them as `Image` by taking advantage of assets localization
 * **Sheets** won't work as they would cover the whole screenshot
   * **Workarounds**
+    * Use the `.screenshotAsSheet()` modifier and call `.productBezel(statusBar: .white)` or `.screenshotStatusBar(.white)` to have a status bar
     * *Fullscreen:* Present the view directly (as if it where a full screen overlay)
     * *ZStack:* Create a ZStack manually with the calling view in the background
 

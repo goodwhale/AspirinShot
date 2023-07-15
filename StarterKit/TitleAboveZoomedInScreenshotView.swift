@@ -4,13 +4,13 @@ import AspirinShot
 
 @available(iOS 15.0, macOS 13.3, *)
 extension Screenshot {
-    static let titleBelow = Screenshot("Title Below")
+    static let titleAboveZoomedIn = Screenshot("Title Above, Zoomed In")
 }
 
 @available(iOS 15.0, macOS 13.3, *)
-struct TitleBelowScreenshotView: View {
+struct TitleAboveZoomedInScreenshotView: View {
     var body: some View {
-        ScreenshotWithTitleView(position: .bottom(0.2), screenshot: .fill(0.9, .bottom)) {
+        ScreenshotWithTitleView(position: .top(0.3), screenshot: .fill(0.9)) {
             Rectangle()
                 .foregroundStyle(.white)
                 .overlay {
@@ -23,13 +23,11 @@ struct TitleBelowScreenshotView: View {
                 }
                 .productBezel(bezel)
         } title: {
-            Text("Alternate the layout for a **more dynamic** gallery.", tableName: "AspirinShot")
-                .font(.system(.title))
+            /// You'll notice that the number of lines change between localizations.
+            ColoredEmphasisText("But perhaps you\n*only* want *the top*\nof the screenshot", textColor: .white, emphasisColor: .red)
                 .multilineTextAlignment(.center)
-                .lineLimit(2)
-                .minimumScaleFactor(0.1)
                 .foregroundColor(.white)
-                .padding(.horizontal)
+                .padding()
                 .padding(.horizontal)
         } background: {
             LinearGradient(
@@ -54,10 +52,10 @@ struct TitleBelowScreenshotView: View {
 }
 
 @available(iOS 15.0, macOS 13.3, *)
-struct TitleBelowScreenshotView_Previews: PreviewProvider {
+struct TitleAboveZoomedInScreenshotView_Previews: PreviewProvider {
     static var previews: some View {
-        ScreenshotPreviews(.titleBelow, in: "es") {
-            TitleBelowScreenshotView()
+        ScreenshotPreviews(.titleAboveZoomedIn, in: "es") {
+            TitleAboveZoomedInScreenshotView()
         }
     }
 }

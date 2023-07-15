@@ -9,9 +9,11 @@
 "Hello" = "Hello";
 
 "A basic view that looks like a raw screenshot." = "A basic view that looks like a raw screenshot.";
-"You can remove its Status bar by deleting the `StatusBarView()`." = "You can remove its Status bar by deleting the `StatusBarView()`.";
+"You can remove the Status Bar and/or Bottom Bar (Home Indicator)." = "You can remove the Status Bar and/or Bottom Bar (Home Indicator).";
 
 "You can't go wrong\nwith a **title above**" = "You can't go wrong\nwith a **title above**";
+
+"But perhaps you\n*only* want *the top*\nof the screenshot" = "But perhaps you\n*only* want *the top*\nof the screenshot";
 
 "Alternate the layout for a **more dynamic** gallery." = "Alternate the layout for a **more dynamic** gallery.";
 
