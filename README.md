@@ -9,6 +9,9 @@ Create your App Store screenshots in SwiftUI:
 * ⚡️ Ready-made templates
 * … and much more to come!
 
+<img src="https://github.com/goodwhale/AspirinShot/assets/137169/decca445-5450-4607-8edf-fb0a4ea09c46" width="600" alt="Browsing the gallery of screenshots"/>
+<img src="https://github.com/goodwhale/AspirinShot/assets/137169/604c0223-68e7-447f-9bbe-83596e87c0b7" width="350" alt="PNG output"/>
+
 AspirinShot is free to test and evaluate, you can take all the time you need to create your screenshots with it.
 Once you're ready to export your screenshots without watermark, please purchase a license.
 
@@ -171,7 +174,7 @@ To wrap your views in nice frames:
 
 You can use the `.screenFormat` environment variable to control your design easily between the different formats of your screenshot.
 
-For instance, you can make use of its platform to change default values, or the displaySize to adjust the layout.
+For instance, you can use its platform to change default values, or the displaySize to adjust the layout.
 
 ```swift
 private var bezel: Bezel {
@@ -318,7 +321,7 @@ An easy way to launch the `AspirinShotPreview` using a custom Scheme.
 
 ## My screenshots look weird in the previews
 
-This is probably because you didn't use a template (eg: `ScreenshotView`) or the `.screenshotFrame()` modifier.
+This is probably because you didn't use a template (eg, `ScreenshotView`) or the `.screenshotFrame()` modifier.
 These make sure the frame matches the `ScreenshotFormat`.
 
 # Known limitations & tradeoffs
@@ -335,19 +338,19 @@ I will try to find better ways to address them: do reach out to talk about it.
     * *Opiniated:* a keyboard takes up 50% of your application's design. This is a missed opportunity to highlight the value/design of your application. Rethink the screenshot, show 2 half screens instead of one, add other elements to support the message, etc.
     * *Image:* export keyboards from the [Apple Design Resources](https://developer.apple.com/design/resources/) and add them as an `Image` (use assets localization if necessary)
     * *Old style:* for that particular view, generate screenshots using a more traditional way and insert them as `Image` by taking advantage of assets localization
-* **Controls** (Menu, etc)
+* **Controls** (Menu, etc.)
   * **Workarounds**.
     * *Image:* use the resources [Apple Design Resources](https://developer.apple.com/design/resources/) to export the missing component and add it as an `Image`
     * *Old style:* for that particular view, generate screenshots using a more traditional way and insert them as `Image` by taking advantage of assets localization
 * **Sheets** won't work as they would cover the whole screenshot
   * **Workarounds**
     * Use the `.screenshotAsSheet()` modifier and call `.productBezel(statusBar: .white)` or `.screenshotStatusBar(.white)` to have a status bar
-    * *Fullscreen:* Present the view directly (as if it where a full screen overlay)
+    * *Fullscreen:* Present the view directly (as if it were a full screen overlay)
     * *ZStack:* Create a ZStack manually with the calling view in the background
 
-## Good to know
+## Reminder
 
-* If your app uses **AttributedStrings**, the localization won't work out of the box because of the simulator. Just use `AttributedStrings(envLocalized:)` (see its doc for mre details).
+* If your app uses **AttributedStrings** or **NSLocalizedStrings**, the localization won't work out of the box because of the simulator. But, the package comes with drop in replacements (`AttributedStrings(envLocalized:)` and `*NSLocalizedStrings(envLocalized:)`). See their doc for more details.
 
 # Origin Story
 
