@@ -25,7 +25,7 @@ I may build a gallery of "Made with AspirinShot" screenshots, so if you want to 
 * Add the package to Xcode:
   * File > Add Packages…
   * Enter `https://github.com/goodwhale/AspirinShot`
-  * Select your Target and make sure it's added to the **Frameworks, Libraries, and Embedded Content** with the "Do Not Embed" option
+  * Select your Target and make sure it's added to the **Frameworks, Libraries, and Embedded Content**
 * Check the `Starter Kit` in this repo. You can copy/paste it in your project and start from there, it features a variety of screenshots.
 
 > 💡 Wrap all content of your screenshot-related files in `#if DEBUG … #endif` statements so that it doesn't end up in production.
