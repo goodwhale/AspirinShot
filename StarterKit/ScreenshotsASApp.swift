@@ -12,6 +12,7 @@ struct ScreenshotsASApp_Previews: PreviewProvider {
                 .framed,
                 .minimal,
                 .minimalStyle,
+                .macOSNavSplit,
                 .titleAbove,
                 .titleAboveZoomedIn,
                 .titleBelow,
@@ -36,6 +37,7 @@ struct ScreenshotsASApp_Previews: PreviewProvider {
                 case .widgets: WidgetsScreenshotView()
                 case .minimal: MinimalScreenshotView()
                 case .minimalStyle: MinimalStyleScreenshotView()
+                case .macOSNavSplit: MacOSNavSplitScreenshotView()
                 case .autoStatusBars: AutoStatusBarsScreenshotView()
                 case .blackStatusBars: BlackStatusBarsScreenshotView()
                 case .whiteStatusBars: WhiteStatusBarsScreenshotView()

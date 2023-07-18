@@ -4,7 +4,7 @@ import AspirinShot
 
 @available(iOS 15.0, macOS 13.3, *)
 extension Screenshot {
-    static let minimal = Screenshot("Minimal", for: .iOS(.portrait))
+    static let minimal = Screenshot("Minimal")
 }
 
 struct MinimalScreenshotView: View {
@@ -39,7 +39,7 @@ struct MinimalScreenshotView: View {
 
 struct MinimalScreenshotView_Previews: PreviewProvider {
     static var previews: some View {
-        ScreenshotPreviews(.framed, in: "fr") {
+        ScreenshotPreviews(.minimal, in: "fr") {
             MinimalScreenshotView()
         }
     }

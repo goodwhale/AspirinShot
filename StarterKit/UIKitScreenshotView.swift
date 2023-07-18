@@ -4,8 +4,10 @@ import AspirinShot
 
 @available(iOS 15.0, macOS 13.3, *)
 extension Screenshot {
-    static let uiKit = Screenshot("UIKit View")
+    static let uiKit = Screenshot("UIKit View", for: .iOS)
 }
+
+#if canImport(UIKIt)
 
 @available(iOS 15.0, macOS 13.3, *)
 struct UIKitScreenshotView: View {
@@ -36,4 +38,15 @@ struct UIKitScreenshotView_Previews: PreviewProvider {
         }
     }
 }
+
+#else
+
+struct UIKitScreenshotView: View {
+    var body: some View {
+        EmptyView()
+    }
+}
+
+#endif
+
 #endif

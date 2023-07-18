@@ -4,7 +4,7 @@ import AspirinShot
 
 @available(iOS 15.0, macOS 13.3, *)
 extension Screenshot {
-    static let inASheet = Screenshot("In a Sheet")
+    static let inASheet = Screenshot("In a Sheet", for: [.iPhone, .iPad])
 }
 
 @available(iOS 15.0, macOS 13.3, *)

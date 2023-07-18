@@ -4,7 +4,7 @@ import AspirinShot
 
 @available(iOS 15.0, macOS 13.3, *)
 extension Screenshot {
-    static let minimalStyle = Screenshot("Minimal Style", for: .iOS(.portrait))
+    static let minimalStyle = Screenshot("Minimal Style")
 }
 
 struct MinimalStyleScreenshotView: View {
@@ -21,8 +21,8 @@ struct MinimalStyleScreenshotView: View {
                     .font(.largeTitle)
                     .foregroundStyle(.black)
                 }
-                .minimalBezel(borderStyle: .secondary)
-                .scaleEffect(0.85)
+            .minimalBezel(borderStyle: .secondary)
+            .scaleEffect(0.85)
         } background: {
             Color.teal
         }
@@ -32,7 +32,7 @@ struct MinimalStyleScreenshotView: View {
 
 struct MinimalStyleScreenshotView_Previews: PreviewProvider {
     static var previews: some View {
-        ScreenshotPreviews(.framed, in: "fr") {
+        ScreenshotPreviews(.minimalStyle, in: "fr") {
             MinimalStyleScreenshotView()
         }
     }

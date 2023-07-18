@@ -1,3 +1,13 @@
+# 0.6
+
+## ✨ New Features
+
+* Early macOS support. Check-out `MacOSNavSplitScreenshotView` in the Starter Kit.
+
+## 🐛 Bugfixes
+
+* Some previews didn't use the correct `Screenshot`
+
 # 0.5
 
 ## ✨ New Features

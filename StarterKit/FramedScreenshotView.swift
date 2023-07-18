@@ -4,7 +4,7 @@ import AspirinShot
 
 @available(iOS 15.0, macOS 13.3, *)
 extension Screenshot {
-    static let framed = Screenshot("Framed", for: .iOS(.portrait))
+    static let framed = Screenshot("Framed", for: .iOS)
 }
 
 @available(iOS 15.0, macOS 13.3, *)

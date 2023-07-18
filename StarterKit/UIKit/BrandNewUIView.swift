@@ -1,4 +1,4 @@
-#if DEBUG
+#if DEBUG && canImport(UIKIt)
 import SwiftUI
 import AspirinShot
 

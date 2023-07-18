@@ -4,7 +4,7 @@ import AspirinShot
 
 @available(iOS 15.0, macOS 13.3, *)
 extension Screenshot {
-    static let titleAbove = Screenshot("Title Above", for: [.iPhone, .iPad(.landscape)])
+    static let titleAbove = Screenshot("Title Above", for: [.iPhone, .mac, .iPad(.landscape)])
 }
 
 @available(iOS 15.0, macOS 13.3, *)
@@ -24,11 +24,12 @@ struct TitleAboveScreenshotView: View {
                     }
                     .font(.largeTitle)
                 }
+                #if os(iOS)
                 // Remove this if you don't want to present the view as a sheet
                 .screenshotAsSheet()
                 // Play with .fit/.fill: the best option depends on the device and its screen format
                 .productBezel(scaledTo: .fit, statusBar: .white)
-            
+                #endif
         } title: {
             /// You'll notice that the number of lines change between localizations.
             AutoResizableText("You can't go wrong\nwith a **title above**")
@@ -49,7 +50,7 @@ struct TitleAboveScreenshotView: View {
 @available(iOS 15.0, macOS 13.3, *)
 struct TitleAboveScreenshotView_Previews: PreviewProvider {
     static var previews: some View {
-        ScreenshotPreviews(for: [.iOS, .iOS(.landscape)]) {
+        ScreenshotPreviews(for: [.iOS, .mac, .iOS(.landscape)]) {
             TitleAboveScreenshotView()
         }
 

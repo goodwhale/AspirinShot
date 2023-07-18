@@ -21,7 +21,9 @@ struct TitleAboveZoomedInScreenshotView: View {
                     }
                     .font(.largeTitle)
                 }
+                #if os(iOS)
                 .productBezel(bezel)
+                #endif
         } title: {
             /// You'll notice that the number of lines change between localizations.
             ColoredEmphasisText("But perhaps you\n*only* want *the top*\nof the screenshot", textColor: .white, emphasisColor: .red)
