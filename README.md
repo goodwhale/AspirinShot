@@ -32,7 +32,7 @@ The framework comes with a rich set of Environment variables (eg: `ScreenshotFor
 
 It also includes the most recent & commonly used [product bezels](https://github.com/goodwhale/AspirinShot/wiki/Designing-your-screenshots#bezels-views-wrappers-that-may-or-may-not-look-like-a-device), with all the pixels and points calculations already done for you.
 
-# Getting Started
+# 🚀 Getting Started
 
 * **Add the package to Xcode:**
   * File > Add Packages…
@@ -40,7 +40,7 @@ It also includes the most recent & commonly used [product bezels](https://github
   * Select your Target and make sure it's added to the **Frameworks, Libraries, and Embedded Content**
 * **Create your screenshots**, either:
   * Check the `Starter Kit` in this repo. You can copy/paste it in your project and start from there, it features a variety of screenshots.
-  * Create one file per screenshot. Prefer `Selectable` mode when previewing your screenshots, as it will adjust the view to the display/output size.
+  * or, Create one file per screenshot using the template below. Prefer `Selectable` mode when previewing your screenshots as it will adjust the view to the display/output size.
 ```swift
 #if DEBUG
 extension Screenshot {
