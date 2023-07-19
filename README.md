@@ -43,6 +43,9 @@ It also includes the most recent & commonly used [product bezels](https://github
   * or, Create one file per screenshot using the template below. Prefer `Selectable` mode when previewing your screenshots as it will adjust the view to the display/output size.
 ```swift
 #if DEBUG
+import SwiftUI
+import AspirinShot
+
 extension Screenshot {
     static let first = Screenshot("First Screenshot")
 }
@@ -80,6 +83,10 @@ struct FirstScreenshotView_Previews: PreviewProvider {
 * **Preview and Export your screenshots**
   * Create a file that will launch the global previewer/exporter
 ```swift
+#if DEBUG
+import SwiftUI
+import AspirinShot
+
 struct ScreenshotsASApp_Previews: PreviewProvider {
     static var previews: some View {
         AspirinShotPreview(
@@ -95,6 +102,7 @@ struct ScreenshotsASApp_Previews: PreviewProvider {
         }
     }
 }
+#endif
 ```
   * Launch the preview in `Live` mode and export your screenshots.
 
