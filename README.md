@@ -58,7 +58,7 @@ struct FirstScreenshotView: View {
             Text("An app you'll love!")
             ContentView() // Replace with a view in your app
               .productBezel() // Frame it
-              .scale(0.7) // Scale it, add a title, make it shine!
+              .scaleEffect(0.7) // Scale it, add a title, make it shine!
           }
         }
         // Set environment values
