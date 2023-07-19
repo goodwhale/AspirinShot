@@ -1,3 +1,20 @@
+# 0.7
+
+## ✨ New Features
+
+* Added `.screenshotOnlyPadding(:)`: a padding that is only added when the view is turned into a PNG
+* Added `.toolbarBlack` and `.toolbarWhite` presets for the status bar when shown above a list
+* Better support of sheets on iPad with the new `ScreenshotWithSheet`. See the `ScreenshotInASheetView` in the starter kit.
+* New `@Environment(\.isScreenshotting)` that is true only when the view is being screenshotted. This is more specific than then `.isAspirinShot`, which is true when a view is part of a screenshot. It's here to help with rare differences between the view and its rendering. In particular, it was created to deal with padding in the Navigation bar.
+
+## 🧐 Improvements
+
+* Added the date in the status bar on iPad
+
+## Changes
+
+* Remove some extra console outputs when exporting
+
 # 0.6
 
 ## ✨ New Features
