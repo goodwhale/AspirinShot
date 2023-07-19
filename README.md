@@ -51,6 +51,10 @@ extension Screenshot {
 }
 
 struct FirstScreenshotView: View {
+    // A lot is done for you automatically based on this, but you can access it 
+    // to adjust your design based on its `.platform` (iPhone, iPad…) or `.displaySize` or `.orientation`
+    @Environment(\.screenshotFormat) private var screenshotFormat
+
     var body: some View {
         ScreenshotView {
           // The design of your screenshot
