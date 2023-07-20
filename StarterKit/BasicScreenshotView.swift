@@ -55,7 +55,7 @@ struct BasicScreenshotView: View {
 struct ScreenshotDarkModeView_Previews: PreviewProvider {
     static var previews: some View {
         // Prefer Selectable Mode for previews to remove the frame
-        ScreenshotPreviews(in: "fr", for: [.iOS, .mac]) {
+        ScreenshotPreviewsBoard(in: "fr", for: [.iOS, .mac], alignHeights: false) {
             BasicScreenshotView()
         }
     }

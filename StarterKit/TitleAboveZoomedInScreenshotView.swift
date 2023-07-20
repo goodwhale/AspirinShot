@@ -26,7 +26,7 @@ struct TitleAboveZoomedInScreenshotView: View {
                 #endif
         } title: {
             /// You'll notice that the number of lines change between localizations.
-            ColoredEmphasisText("But perhaps you\n*only* want *the top*\nof the screenshot", textColor: .white, emphasisColor: .red)
+            ColoredEmphasisText("But perhaps you\n*only* want *the top*\nof the screenshot", emphasis: .red)
                 .multilineTextAlignment(.center)
                 .foregroundColor(.white)
                 .padding()

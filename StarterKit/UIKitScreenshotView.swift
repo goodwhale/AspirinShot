@@ -16,7 +16,7 @@ struct UIKitScreenshotView: View {
             BrandNewUIView()
                 .productBezel()
         } title: {
-            ColoredEmphasisText("Oh UIKit,\nmy *old friend*.", table: "AspirinShot", lineLimit: 2, textColor: .white, emphasisColor: .gray)
+            ColoredEmphasisText("Oh UIKit,\nmy *old friend*.", tableName: "AspirinShot", lineLimit: 2, textColor: .white, emphasisColor: .gray)
                 .multilineTextAlignment(.center)
                 .foregroundColor(.white)
                 .padding()

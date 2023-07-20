@@ -1,3 +1,18 @@
+# 0.8
+
+## ✨ New Features
+
+* New `ScreenshotPreviewsBoard` to preview all formats at once. It has the same signature as `ScreenshotPreviews` so that it's easy to switch between both. 
+
+## Changes
+
+* [Breaking] the `textColor` attribute of `ColoredEmphasisText` was removed since you can just set it using `.foregroundColor()`. `emphasisColor` was renamed to `emphasis`, and `table` to `tableName` to be consistent with the `Text` signature.
+* `ColoredEmphasisText` can be used with `resizable: false` to avoid the auto-resizing effect
+
+## 🐛 Bugfixes
+
+* Previews names in Portrait displayed a "L" which indicates Landscape
+
 # 0.7
 
 ## ✨ New Features

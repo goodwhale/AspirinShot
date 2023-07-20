@@ -15,11 +15,36 @@ struct FramedScreenshotView: View {
                 .foregroundStyle(.white)
                 .overlay {
                     VStack {
+                        Image(systemName: "sparkles")
+                            .foregroundColor(.yellow)
+                            .font(.largeTitle)
+                            .imageScale(.large)
+                            /// `.scaling`, fitted for each `ScreenshotFormat`
+                            .scaleEffectShot([
+                                .iPhone_5_5: 1,
+                                .iPhone_6_5: 1.5,
+                                .iPad_12_9: 2
+                            ])
+                            /// `.padding`, fitted for each `ScreenshotFormat`
+                            .paddingShot(.bottom, [
+                                .iPhone_5_5: 8,
+                                .iPhone_6_5: 24,
+                                .iPad_12_9: 64
+                            ])
+                            /// There's also `.offsetShot(x:y:)`
                         Text("Hello", tableName: "AspirinShot")
+                            .font(.largeTitle)
                         Text("@AspirinShot")
                             .bold()
+                            /// `.font`, fitted for each `ScreenshotFormat`
+                            .fontShot(
+                                size: [
+                                    .iPhone_5_5: 40,
+                                    .iPhone_6_5: 45,
+                                    .iPad_12_9: 80
+                                ]
+                            )
                     }
-                    .font(.largeTitle)
                 }
                 .productBezel()
                 .scaleEffect(0.85)
@@ -37,7 +62,7 @@ struct FramedScreenshotView: View {
 struct FramedScreenshotView_Previews: PreviewProvider {
     static var previews: some View {
         // Prefer Selectable Mode for previews to remove the frame
-        ScreenshotPreviews(.framed, in: "fr") {
+        ScreenshotPreviewsBoard(.framed, in: "fr", alignHeights: true) {
             FramedScreenshotView()
         }
         
