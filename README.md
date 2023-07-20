@@ -18,6 +18,7 @@ Once you're ready to export your screenshots without watermark, please purchase 
 > 🚧 Beta Warning: The documentation is incomplete. Please bear with me while I update this page and the code documentation. 😅
 
 Contact:
+* [Discussions](https://github.com/goodwhale/AspirinShot/discussions)
 * AspirinShot: 🐦 [Twitter](https://twitter.com/AspirinShot) - 🦣 [Mastodon](http://indieapps.space/@aspirinshot)
 * Arnaud (Author): 🐦 [Twitter](https://twitter.com/sowenjub) - 🦣 [Mastodon](http://mastodon.social/@sowenjub) - https://sowenjub.me
 
@@ -109,9 +110,9 @@ struct ScreenshotsASApp_Previews: PreviewProvider {
 #endif
 ```
   * Launch the preview in `Live` mode and export your screenshots.
-
 > 📚 For more ways to preview your screenshots, see [Previewing your screenshots](https://github.com/goodwhale/AspirinShot/wiki/Previewing-your-screenshots)
 
+For more details about building and previewing your screenshots, make sure you [visit the wiki](https://github.com/goodwhale/AspirinShot/wiki). And you can [start a discussion](https://github.com/goodwhale/AspirinShot/discussions) if you have any questions!
 
 # Known limitations
 
