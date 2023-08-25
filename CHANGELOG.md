@@ -1,3 +1,18 @@
+# 0.9
+
+## ✨ New Features
+
+* New `.fontShot()` modifier taking a dictionary of `ScreenshotFormat`/`Font`.
+
+## 🧐 Improvements
+
+* Use min values for `.fontShot()` and `.offset()` instead as default values
+* All format aware modifiers (`.fontShot`, `.offsetShot`, `.paddingShot`, `.scaleEffectShot`) take default values.
+
+## 🐛 Bugfixes
+
+* Updated the SSL certificate
+
 # 0.8
 
 ## ✨ New Features
