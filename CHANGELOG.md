@@ -1,3 +1,7 @@
+# 0.9.1
+
+* Use semantic versioning 
+
 # 0.9
 
 ## ✨ New Features

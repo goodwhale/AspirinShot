@@ -95,7 +95,8 @@ import AspirinShot
 struct ScreenshotsASApp_Previews: PreviewProvider {
     static var previews: some View {
         AspirinShotPreview(
-            screenshots: [.hero, .why, .how, .success] // All your `Screenshot` declarations
+            screenshots: [.hero, .why, .how, .success], // All your `Screenshot` declarations
+            userID: "yourUserId" // Only for export Ask me for a free access during beta
         ) { screenshot in
             switch screenshot { // Match each one to their view
                 case .hero: HeroScreenshotView()
