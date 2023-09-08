@@ -41,7 +41,10 @@ It also includes the most recent & commonly used [product bezels](https://github
   * Select your Target and make sure it's added to the **Frameworks, Libraries, and Embedded Content**
 * **Create your screenshots**, either:
   * Check the `Starter Kit` in this repo. You can copy/paste it in your project and start from there, it features a variety of screenshots.
-  * or, Create one file per screenshot using the template below. Prefer `Selectable` mode when previewing your screenshots as it will adjust the view to the display/output size.
+  * or, Create one file per screenshot using the template below.
+  * Prefer `Selectable` mode when previewing your screenshots as it will adjust the view to the display/output size. It's an option at the bottom left of the preview panel:
+  <img width="335" alt="CleanShot 2023-09-08 at 10 31 56@2x" src="https://github.com/goodwhale/AspirinShot/assets/137169/f9f5a8e3-1bc5-42e3-b800-608860f40e57">
+
 ```swift
 #if DEBUG
 import SwiftUI
