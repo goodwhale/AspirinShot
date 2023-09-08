@@ -55,24 +55,47 @@ extension Screenshot {
 }
 
 struct FirstScreenshotView: View {
-    // A lot is done for you automatically based on this, but you can access it 
+    // A lot is done for you automatically based on this, but you can access it
     // to adjust your design based on its `.platform` (iPhone, iPad…) or `.displaySize` or `.orientation`
     @Environment(\.screenshotFormat) private var screenshotFormat
-
+    
     var body: some View {
-        ScreenshotView {
-          // The design of your screenshot
-          VStack {
-            Text("An app you'll love!")
-            ContentView() // Replace with a view in your app
-              .productBezel() // Frame it
-              .scaleEffect(0.7) // Scale it, add a title, make it shine!
-          }
+        // Check the StarterKit for more templates
+        // Play with .fit/.fill:
+        // * .fill for a zoomed in effect, partial view
+        // * .fit to see the entire view
+        ScreenshotWithTitleView(position: .top(0.2), screenshot: .fit(0.95, .top)) {
+            Rectangle()
+                .foregroundStyle(.white)
+                .overlay {
+                    VStack {
+                        Text("Hello", tableName: "AspirinShot")
+                        Text("@AspirinShot")
+                            .bold()
+                    }
+                    .font(.largeTitle)
+                }
+                // Play with .fit/.fill: the best option depends on the device and its screen format
+                .productBezel(scaledTo: .fit, statusBar: .black(on: .white))
+        } title: {
+            AutoResizableText("**You will love\nthis app**")
+                .multilineTextAlignment(.center)
+                .padding()
+                .padding(.horizontal)
+        } background: {
+            // Use a gradient or a pattern
+            SFPatternView(systemName: "star.fill", itemSize: 40)
+                .foregroundStyle(.teal)
         }
         // Set environment values
         .environment(\.managedObjectContext, PersistenceController.screenshots.viewContext)
         .environment(\.isProUser, true)
         .environmentObject(ViewModel())
+    }
+    
+    private var contentView: some View {
+        Rectangle()
+            .foregroundStyle(Color.white)
     }
 }
 
