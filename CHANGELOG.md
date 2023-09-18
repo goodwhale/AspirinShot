@@ -1,3 +1,9 @@
+# 0.9.2
+
+## 🐛 Bugfixes
+
+* Small widgets didn't use the title given to them.
+
 # 0.9.1
 
 * Use semantic versioning 
