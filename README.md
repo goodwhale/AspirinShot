@@ -12,8 +12,8 @@ Create your App Store screenshots in SwiftUI:
 <img src="https://github.com/goodwhale/AspirinShot/assets/137169/decca445-5450-4607-8edf-fb0a4ea09c46" width="600" alt="Browsing the gallery of screenshots"/>
 <img src="https://github.com/goodwhale/AspirinShot/assets/137169/604c0223-68e7-447f-9bbe-83596e87c0b7" width="350" alt="PNG output"/>
 
-AspirinShot is free to test and evaluate, you can take all the time you need to create your screenshots with it.
-Once you're ready to export your screenshots without watermark, please purchase a license.
+AspirinShot is free while it is in beta, you can take all the time you need to create your screenshots with it.
+Once you're ready to export your screenshots without watermark, please shoot me an email to get a free license.
 
 > 🚧 Beta Warning: The documentation is incomplete. Please bear with me while I update this page and the code documentation. 😅
 
