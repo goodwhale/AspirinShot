@@ -1,3 +1,9 @@
+# 0.9.3
+
+## 🐛 Bugfixes
+
+* Fixed userID failing to remove watermarks
+
 # 0.9.2
 
 ## 🐛 Bugfixes
