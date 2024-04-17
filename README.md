@@ -39,6 +39,9 @@ It also includes the most recent & commonly used [product bezels](https://github
   * File > Add Packages…
   * Enter `https://github.com/goodwhale/AspirinShot`
   * Select your Target and make sure it's added to the **Frameworks, Libraries, and Embedded Content**
+* **Make sure the package doesn't end in your Release build**
+  * In your Target's *Build Settings*, head to *Build Options* and *Excluded Source File Names*. Add "AspirinShot*" under Release. <img width="335" alt="Build Settings" src="https://github.com/goodwhale/AspirinShot/assets/137169/7554c8ac-727b-40ce-a059-0868da0dc262">
+
 * **Create your screenshots**, either:
   * Check the `Starter Kit` in this repo. You can copy/paste it in your project and start from there, it features a variety of screenshots.
   * or, Create one file per screenshot using the template below.
