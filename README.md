@@ -109,6 +109,14 @@ struct FirstScreenshotView_Previews: PreviewProvider {
         }
     }
 }
+
+// or using the macros
+
+#Preview(traits: .sizeThatFitsLayout) {
+    ScreenshotPreviews(.first, in: "fr") {
+        FirstScreenshotView()
+    }
+}
 #endif
 ```
 
