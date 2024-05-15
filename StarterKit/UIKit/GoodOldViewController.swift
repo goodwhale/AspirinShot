@@ -1,4 +1,3 @@
-#if DEBUG
 import UIKit
 import AspirinShot
 
@@ -21,4 +20,3 @@ class GoodOldViewController: UIViewController {
         }
     }
 }
-#endif

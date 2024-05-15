@@ -1,4 +1,3 @@
-#if DEBUG
 import SwiftUI
 import AspirinShot
 
@@ -94,4 +93,3 @@ struct AutoStatusBarsScreenshotView_Previews: PreviewProvider {
         }
     }
 }
-#endif

@@ -1,4 +1,3 @@
-#if DEBUG
 import SwiftUI
 
 @available(iOS 15.0, macOS 13.3, *)
@@ -13,4 +12,3 @@ struct BottomBarStyleTitle: ViewModifier {
         }
     }
 }
-#endif

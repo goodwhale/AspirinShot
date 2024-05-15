@@ -1,3 +1,7 @@
+# 0.9.5
+
+* Restored hidden structs (such as `AspirinShotPreview`)
+
 # 0.9.4
 
 ## ✨ New Features
