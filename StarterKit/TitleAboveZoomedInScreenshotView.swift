@@ -1,4 +1,4 @@
-#if DEBUG
+#if canImport(AspirinShot)
 import SwiftUI
 import AspirinShot
 
@@ -26,7 +26,8 @@ struct TitleAboveZoomedInScreenshotView: View {
                 #endif
         } title: {
             /// You'll notice that the number of lines change between localizations.
-            ColoredEmphasisText("But perhaps you\n*only* want *the top*\nof the screenshot", emphasis: .red)
+            TextThatFills("But perhaps you\n*only* want *the top*\nof the screenshot", highlightColor: .red)
+                .fontWeight(.bold)
                 .multilineTextAlignment(.center)
                 .foregroundColor(.white)
                 .padding()

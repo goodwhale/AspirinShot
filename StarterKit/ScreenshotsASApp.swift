@@ -1,4 +1,4 @@
-#if DEBUG
+#if canImport(AspirinShot)
 import SwiftUI
 import AspirinShot
 
@@ -25,7 +25,8 @@ struct ScreenshotsASApp_Previews: PreviewProvider {
                 .autoBottomBars,
                 .blackBottomBars,
                 .whiteBottomBars,
-            ]
+            ],
+            userID: "betashots" // To remove the watermarks added during export
         ) { screenshot in
             switch screenshot {
                 case .basic: BasicScreenshotView()

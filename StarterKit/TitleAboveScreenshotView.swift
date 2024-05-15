@@ -1,4 +1,4 @@
-#if DEBUG
+#if canImport(AspirinShot)
 import SwiftUI
 import AspirinShot
 
@@ -32,7 +32,9 @@ struct TitleAboveScreenshotView: View {
                 #endif
         } title: {
             /// You'll notice that the number of lines change between localizations.
-            AutoResizableText("You can't go wrong\nwith a **title above**")
+            TextThatFills("You can't go wrong\nwith a **title above**")
+                .fontDesign(.rounded)
+                .fontWeight(.light)
                 .multilineTextAlignment(.center)
                 .foregroundColor(.white)
                 .padding()

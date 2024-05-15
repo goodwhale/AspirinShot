@@ -1,4 +1,4 @@
-#if DEBUG
+#if canImport(AspirinShot)
 import SwiftUI
 import AspirinShot
 
@@ -23,7 +23,7 @@ struct MacOSNavSplitScreenshotView: View {
             .minimalBezel(borderStyle: .secondary, inset: true)
             .offset(y: 30)
         } title: {
-            AutoResizableText("This is a **work in progress**")
+            TextThatFills("This is a **work in progress**")
                 .multilineTextAlignment(.center)
                 .foregroundColor(.white)
                 .padding()

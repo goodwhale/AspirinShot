@@ -1,4 +1,4 @@
-#if DEBUG
+#if canImport(AspirinShot)
 import SwiftUI
 import AspirinShot
 
@@ -25,7 +25,7 @@ struct ScreenshotInASheetView: View {
                 .productBezel(scaledTo: .fit, statusBar: .white)
         } title: {
             /// You'll notice that the number of lines change between localizations.
-            AutoResizableText("Present **your view**\nin a **sheet**")
+            TextThatFills("Present **your view**\nin a **sheet**")
                 .multilineTextAlignment(.center)
                 .foregroundColor(.white)
                 .padding()

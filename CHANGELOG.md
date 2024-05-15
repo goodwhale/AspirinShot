@@ -1,3 +1,19 @@
+# 0.9.4
+
+## ✨ New Features
+
+* Added support for iPad 13", iPhone 15 Series
+* Changed default iPhone size from 6.5" to 6.7" to reflect App Store Connect changes
+* Added support for iPhone 8 Plus for 5.5"
+* New `BicolorText` when you want to change the color of the text between `*` or `**`. Similar to `TextThatFills`, without the resizing.
+* `ScreenshotSandwichView` allows you to show a title between 2 screenshots (above/below)
+* New naming format for files. It used to be optimized for fastlane, but you can now pick one that makes it easier to drag & drop files.
+
+## 🧐 Improvements
+
+* Added support for strong emphasis (`**`) in `colorEmphasis` and `ColoredEmphasisText` 
+* Deprecated `AutoResizableText` in favor of `TextThatFills` which supports markdown, highlight color for (`*` or `**`) and design/weight modifiers
+
 # 0.9.3
 
 ## 🐛 Bugfixes

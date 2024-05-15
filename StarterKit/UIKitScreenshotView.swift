@@ -1,4 +1,4 @@
-#if DEBUG
+#if canImport(AspirinShot)
 import SwiftUI
 import AspirinShot
 
@@ -7,8 +7,6 @@ extension Screenshot {
     static let uiKit = Screenshot("UIKit View", for: .iOS)
 }
 
-#if canImport(UIKIt)
-
 @available(iOS 15.0, macOS 13.3, *)
 struct UIKitScreenshotView: View {
     var body: some View {
@@ -16,7 +14,7 @@ struct UIKitScreenshotView: View {
             BrandNewUIView()
                 .productBezel()
         } title: {
-            ColoredEmphasisText("Oh UIKit,\nmy *old friend*.", tableName: "AspirinShot", lineLimit: 2, textColor: .white, emphasisColor: .gray)
+            TextThatFills("Oh UIKit,\nmy *old friend*.", tableName: "AspirinShot", lineLimit: 2, highlightColor: .gray)
                 .multilineTextAlignment(.center)
                 .foregroundColor(.white)
                 .padding()
@@ -38,15 +36,5 @@ struct UIKitScreenshotView_Previews: PreviewProvider {
         }
     }
 }
-
-#else
-
-struct UIKitScreenshotView: View {
-    var body: some View {
-        EmptyView()
-    }
-}
-
-#endif
 
 #endif

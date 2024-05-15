@@ -1,4 +1,4 @@
-#if DEBUG
+#if canImport(AspirinShot)
 import SwiftUI
 import AspirinShot
 
@@ -9,6 +9,7 @@ extension Screenshot {
 
 @available(iOS 15.0, macOS 13.3, *)
 struct BasicScreenshotView: View {
+    @Environment(\.locale) private var locale
     var body: some View {
         ScreenshotView {
             VStack(spacing: 0) {
@@ -24,6 +25,7 @@ struct BasicScreenshotView: View {
                             .bold()
                     }
                     VStack(spacing: 16) {
+                        Text(LocalizedStringKey("test").toString())
                         Text("A basic view that looks like a raw screenshot.", tableName: "AspirinShot")
                             .font(.body)
                         Text("You can remove the Status Bar and/or Bottom Bar (Home Indicator).", tableName: "AspirinShot")
@@ -52,7 +54,7 @@ struct BasicScreenshotView: View {
 }
 
 @available(iOS 15.0, macOS 13.3, *)
-struct ScreenshotDarkModeView_Previews: PreviewProvider {
+struct BasicScreenshotView_Previews: PreviewProvider {
     static var previews: some View {
         // Prefer Selectable Mode for previews to remove the frame
         ScreenshotPreviewsBoard(in: "fr", for: [.iOS, .mac], alignHeights: false) {
@@ -61,3 +63,32 @@ struct ScreenshotDarkModeView_Previews: PreviewProvider {
     }
 }
 #endif
+
+extension LocalizedStringKey {
+    var stringKey: String? {
+        Mirror(reflecting: self).children.first(where: { $0.label == "key" })?.value as? String
+    }
+    
+    func toString(locale: Locale = .current) -> String {
+        return .localizedString(for: self.stringKey ?? "", locale: locale)
+    }
+}
+
+extension String {
+    static func localizedString(for key: String,
+                                locale: Locale = .current) -> String {
+        
+        let language = locale.languageCode
+        guard let path = Bundle.main.path(forResource: language, ofType: "lproj") else {
+            print("No bundle for language \(language?.description ?? "")")
+            return ""
+        }
+        guard let bundle = Bundle(path: path) else {
+            print("No bundle for path \(path)")
+            return ""
+        }
+        let localizedString = NSLocalizedString(key, bundle: bundle, comment: "")
+        
+        return localizedString
+    }
+}
