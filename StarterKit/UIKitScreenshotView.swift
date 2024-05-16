@@ -11,8 +11,12 @@ extension Screenshot {
 struct UIKitScreenshotView: View {
     var body: some View {
         ScreenshotWithTitleView(position: .top(0.2)) {
+            #if canImport(UIKit)
             BrandNewUIView()
                 .productBezel()
+            #else
+            Text("iOS Only")
+            #endif
         } title: {
             TextThatFills("Oh UIKit,\nmy *old friend*.", tableName: "AspirinShot", lineLimit: 2, highlightColor: .gray)
                 .multilineTextAlignment(.center)
@@ -36,5 +40,4 @@ struct UIKitScreenshotView_Previews: PreviewProvider {
         }
     }
 }
-
 #endif

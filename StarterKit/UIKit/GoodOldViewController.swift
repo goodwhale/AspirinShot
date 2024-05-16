@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import UIKit
 import AspirinShot
 
@@ -20,3 +21,4 @@ class GoodOldViewController: UIViewController {
         }
     }
 }
+#endif

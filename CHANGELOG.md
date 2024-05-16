@@ -1,3 +1,8 @@
+# 0.9.6
+
+* Adjusted the default bezels for each display size to match the corresponding flagship device: 5.5" -> iPhone 8 Plus, 6.5" -> iPhone 14 Plus, 6.7" -> iPhone 15 Pro Max 
+* You can now select specific formats in the preview gallery. When a screenshot doesn't support the format it won't be displayed (previously it would show a default format). So if your screenshot only supports 6.5", eg `Screenshot("Two", format: .iPhone_6_5)`, it will not appear in the preview gallery when previewing the 5.5" display size
+
 # 0.9.5
 
 * Restored hidden structs (such as `AspirinShotPreview`)

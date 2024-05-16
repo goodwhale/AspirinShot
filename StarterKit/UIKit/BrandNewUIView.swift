@@ -1,3 +1,4 @@
+#if canImport(UIKit)
 import SwiftUI
 import AspirinShot
 
@@ -23,3 +24,4 @@ struct BrandNewUIView: UIViewControllerRepresentable {
         viewController.screenshotFormat = screenshotFormat
     }
 }
+#endif
