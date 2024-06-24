@@ -1,3 +1,10 @@
+> [!CAUTION]
+> I decided to publish it instead of keeping it for myself, but I don't have time to do more than what's available.
+> On the plus side, it's free (using the userID "betashots").
+> The downside is that it's pretty hard to get started. Using the StarterKit will help, as well as looking at the wiki.
+> Good luck!
+
+
 # AspirinShot
 
 Create your App Store screenshots in SwiftUI:
